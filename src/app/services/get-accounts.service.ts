@@ -15,7 +15,7 @@ export class GetAccountsService {
     this.store = store;
   }
   getAllAccounts(): Observable<Array<Account>>{
-    return this.http.get('/assets/data/accounts.json')
+    return this.http.get('assets/data/accounts.json')
       .map(res => res.json());
   }
 
