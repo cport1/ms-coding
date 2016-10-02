@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "AAA - 1238",
+    "total": 45121.90,
+    "percentChange": 0.0007,
+    "priceChange":31.87
+  },
+  {
+    "id": 2,
+    "name": "AAA - 8122",
+    "total": 12335.79,
+    "percentChange": -0.0003,
+    "priceChange": 7.83
+  },
+  {
+    "id": 3,
+    "name": "AAA - 1812",
+    "total": 11900.34,
+    "percentChange": 0,
+    "priceChange": 0
+  },
+  {
+    "id": 4,
+    "name": "AAA - 3028",
+    "total": 155.99,
+    "percentChange": 0,
+    "priceChange":0
+  }
+]
+
+
