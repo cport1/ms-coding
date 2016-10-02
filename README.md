@@ -6,6 +6,7 @@ Install the [Redux Devtools](https://chrome.google.com/webstore/detail/redux-dev
 ## Ascending Service
 The ascending method can be found in src/app/services/get-accounts.service.ts
 
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
 
 ## Development server
