@@ -1,4 +1,10 @@
-# MorganStanley
+# MS-CODING
+
+## Application State
+Install the [Redux Devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) Chroem Extension to view the state initialization. Upon initialization the accounts list is stored in the Application State.
+
+## Ascending Service
+The ascending method can be found in src/app/services/get-accounts.service.ts
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
 
