@@ -26,7 +26,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.accountsService.initialise();
+    this.accountsService.initialize();
   }
 
 

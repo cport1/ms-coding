@@ -34,7 +34,7 @@ export class GetAccountsService {
     }
   }
 
-  initialise(): void{
+  initialize(): void{
     console.log('initialized app');
     this.store.dispatch({ type: "INIT_ACCOUNTS", payload: { } });
   }
