@@ -1,3 +1,30 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+  <ul>
+    <li class="header">
+      <span class="header__account">Account</span>
+      <div class="header__price">
+        <span class="header__total">Total Assets</span>
+        <span class="header__change">Today's Change</span>
+      </div>
+    </li>
+    <li *ngFor="let account of $currentAccounts | async"
+        class="account"
+        [ngClass]="{
+        'ascending': account.background == true
+        }"
+        (click)="greaterThanOrEqual(account, account.total)"
+    >
+      <span class="account__name">{{account.name}}</span>
+      <div class="account__price">
+        <span class="account__total">{{account.total | currency:'USD':true:'1.2-2'}}</span>
+        <span class="account__change" [ngClass]="{
+          'account__change--up': account.percentChange > 0,
+          'account__change--down': account.percentChange < 0
+        }">
+          {{account.percentChange | percent:'1.2-2'}} /
+          {{account.priceChange | currency:'USD':true:'1.2-2'}}
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>

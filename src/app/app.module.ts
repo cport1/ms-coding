@@ -5,16 +5,40 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import effects from './effects';
+import { runEffects } from '@ngrx/effects';
+import actions from './actions';
+import reducer from './reducers';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreLogMonitorModule, useLogMonitor } from '@ngrx/store-log-monitor';
+
+import { GetAccountsService } from './services/get-accounts.service';
+import { KeysPipe } from "./pipes/keyValues";
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    KeysPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    StoreModule.provideStore(reducer),
+    StoreDevtoolsModule.instrumentStore({
+      monitor: useLogMonitor({
+        visible: false,
+        position: 'right'
+      })
+    }),
+    StoreLogMonitorModule
   ],
-  providers: [],
+  providers: [
+    actions,
+    runEffects(effects),
+    GetAccountsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
