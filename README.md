@@ -3,8 +3,16 @@
 ## Application State
 Install the [Redux Devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) Chroem Extension to view the state initialization. Upon initialization the accounts list is stored in the Application State.
 
+## @ngrx
+* The application state uses @ngrx/core and @ngrx/store to store the application state. 
+* Side effects (async calls / Redux Saga) are handled through @ngrx/effects.
+* Redux Devtools is available through @ngrx/store-devtools and @ngrx/store-log-monitor
+
 ## Ascending Service
 The ascending method can be found in src/app/services/get-accounts.service.ts
+
+
+
 
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
